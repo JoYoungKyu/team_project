@@ -6,7 +6,7 @@ import tkinter as tk
 from tkinter import filedialog
 
 # 1. YOLO 모델 로드
-model = YOLO("yolo11x.pt")
+model = YOLO("yolo11n.pt")
 
 # 2. 폴더 선택 대화상자 생성
 root = tk.Tk()
@@ -14,28 +14,28 @@ root.withdraw()  # 메인 윈도우 숨기기
 
 # 입력 이미지 폴더 선택
 print("입력 이미지 폴더를 선택해주세요...")
-image_folder = filedialog.askdirectory(title="입력 이미지 폴더 선택")
+image_folder = filedialog.askdirectory(title="team_project\sample")
 if not image_folder:
     print("폴더가 선택되지 않았습니다. 프로그램을 종료합니다.")
     exit()
 
 # 결과 이미지 폴더 선택
 print("결과 이미지 저장 폴더를 선택해주세요...")
-output_image_folder = filedialog.askdirectory(title="결과 이미지 저장 폴더 선택")
+output_image_folder = filedialog.askdirectory(title="labeling\labelingtest")
 if not output_image_folder:
     print("폴더가 선택되지 않았습니다. 프로그램을 종료합니다.")
     exit()
 
 # 라벨 저장 폴더 선택
 print("라벨 저장 폴더를 선택해주세요...")
-output_folder = filedialog.askdirectory(title="라벨 저장 폴더 선택")
+output_folder = filedialog.askdirectory(title="labeling\labelingtesttxt")
 if not output_folder:
     print("폴더가 선택되지 않았습니다. 프로그램을 종료합니다.")
     exit()
 
 # 3. 결과 저장 폴더 생성
-os.makedirs(output_folder, exist_ok=True)  
-os.makedirs(output_image_folder, exist_ok=True)  
+os.makedirs(output_folder, exist_ok=True)
+os.makedirs(output_image_folder, exist_ok=True)
 
 # 4. 이미지 파일 목록 가져오기
 image_files = [f for f in os.listdir(image_folder) if f.endswith(('.jpg', '.jpeg', '.png'))]
