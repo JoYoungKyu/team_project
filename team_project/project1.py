@@ -8,12 +8,31 @@ project = rf.workspace("jyk-ucnhk").project("jyk")
 version = project.version(11)
 model = version.model
 
-# 영상 캡처
-cap = cv2.VideoCapture(0)  # 웹캠 사용, 파일 경로를 지정하면 영상 파일 사용 가능
+# 마우스 이벤트 관련 변수
+drawing = False
+roi_points = []
+roi_rect = None
 
-# 관심 영역(ROI) 좌표 설정 (예: 교차로의 특정 구역)
-roi_points = np.array([[100, 100], [500, 100], [500, 400], [100, 400]], np.int32)
-roi_points = roi_points.reshape((-1, 1, 2))
+def draw_rectangle(event, x, y, flags, param):
+    global drawing, roi_points, roi_rect
+    
+    if event == cv2.EVENT_LBUTTONDOWN:
+        drawing = True
+        roi_points = [(x, y)]
+        
+    elif event == cv2.EVENT_MOUSEMOVE:
+        if drawing:
+            roi_rect = (roi_points[0][0], roi_points[0][1], x, y)
+            
+    elif event == cv2.EVENT_LBUTTONUP:
+        drawing = False
+        roi_rect = (roi_points[0][0], roi_points[0][1], x, y)
+        roi_points = []
+
+# 영상 캡처
+cap = cv2.VideoCapture(0)
+cv2.namedWindow('Object Detection')
+cv2.setMouseCallback('Object Detection', draw_rectangle)
 
 while True:
     ret, frame = cap.read()
@@ -21,7 +40,11 @@ while True:
         break
 
     # ROI 영역 표시
-    cv2.polylines(frame, [roi_points], True, (0, 255, 0), 2)
+    if roi_rect is not None:
+        x1, y1, x2, y2 = roi_rect
+        cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 2)
+        roi_points = np.array([[x1, y1], [x2, y1], [x2, y2], [x1, y2]], np.int32)
+        roi_points = roi_points.reshape((-1, 1, 2))
 
     # YOLO 객체 감지
     predictions = model.predict(frame, confidence=40, overlap=30).json()
@@ -36,7 +59,7 @@ while True:
         confidence = prediction['confidence']
 
         # 객체가 ROI 내에 있는지 확인
-        if cv2.pointPolygonTest(roi_points, (x, y), False) >= 0:
+        if roi_rect is not None and cv2.pointPolygonTest(roi_points, (x, y), False) >= 0:
             # ROI 내의 객체만 표시
             cv2.rectangle(frame, (x - width//2, y - height//2), 
                          (x + width//2, y + height//2), (0, 0, 255), 2)
