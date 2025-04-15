@@ -45,6 +45,9 @@ https://www.roboflow.com/
 데이터셋 사진 : ![KakaoTalk_20250415_175443746](https://github.com/user-attachments/assets/e68cfec2-9211-486d-a619-8cf8492f3923)
 
 비전 제작 : ![캡처](https://github.com/user-attachments/assets/b34e5fd7-24b2-466e-8935-fb2a32ad3bbe)
+```
+Train : Vaild : Test =  8 : 1 : 1
+```
 
 ## 🎁PPT 자료
 ```
