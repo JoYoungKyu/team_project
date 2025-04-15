@@ -44,6 +44,8 @@ https://www.roboflow.com/
 ### 데이터 전처리
 데이터셋 사진 : ![캡처](https://github.com/user-attachments/assets/f3f0aa0a-a1b9-4ba1-b89f-d3c2c85961f0)
 
+비전 제작 : ![KakaoTalk_20250415_173741013](https://github.com/user-attachments/assets/228da636-cf83-49c9-9383-fc4ba84c6afe)
+
 ## 🎁PPT 자료
 ```
 PPT 링크 및 파일 . . .
