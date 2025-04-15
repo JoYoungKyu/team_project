@@ -35,6 +35,7 @@ https://www.its.go.kr/opendata/
 https://www.roboflow.com/
 
 ### 데이터검증
+자동라벨링 사진 : ![캡처](https://github.com/user-attachments/assets/c46c39e1-4656-4066-9f5d-60d45378797f)
 ![캡처](https://github.com/user-attachments/assets/b8f0ec96-9fdd-4b30-9ad4-dbdd1d307afe)
 
 ## 🎁PPT 자료
