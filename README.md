@@ -33,6 +33,8 @@ https://www.its.go.kr/opendata/
 
 https://www.roboflow.com/
 
+### 데이터검증
+
 ## 🎁PPT 자료
 ```
 PPT 링크 및 파일 . . .
