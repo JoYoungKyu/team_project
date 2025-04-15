@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 8
+names: ['Bicycle', 'Bus', 'Car', 'Crosswalk', 'Motorcycle', 'Person', 'Traffic light', 'Truck']
+
+roboflow:
+  workspace: joyk
+  project: jyk-jipji
+  version: 2
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/joyk/jyk-jipji/dataset/2
