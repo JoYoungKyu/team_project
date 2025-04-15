@@ -26,7 +26,7 @@
 ![Image](https://github.com/user-attachments/assets/7f57d601-8528-42d8-817a-8e7887fecec1)
 
 ### 데이터수집
-![C-221008_13_CR06_01_A0645](https://github.com/user-attachments/assets/727ffe01-8af3-47c1-9bf1-4a6a05a5479c)
+![캡처](https://github.com/user-attachments/assets/b8f0ec96-9fdd-4b30-9ad4-dbdd1d307afe)
 참고자료 : https://docs.ultralytics.com/
 
 https://www.its.go.kr/opendata/
