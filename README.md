@@ -22,6 +22,11 @@
 타임테이블 . . . 
 ```
 
+## 🎁프로젝트 진행
+```
+![image](https://github.com/user-attachments/assets/604801b5-c8d2-4fe0-8a4b-7b22acd01205)
+```
+
 ## 🎁PPT 자료
 ```
 PPT 링크 및 파일 . . .
