@@ -24,7 +24,7 @@
 
 ## 🎁프로젝트 진행
 ```
-
+![Image](https://github.com/user-attachments/assets/7f57d601-8528-42d8-817a-8e7887fecec1)
 ```
 
 ## 🎁PPT 자료
