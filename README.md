@@ -35,14 +35,14 @@ https://www.its.go.kr/opendata/
 https://www.roboflow.com/
 
 ### 데이터검증
-자동라벨링 버튼사진 : ![캡처](https://github.com/user-attachments/assets/c46c39e1-4656-4066-9f5d-60d45378797f)
+자동라벨링 버튼사진 : ![KakaoTalk_20250415_175040917](https://github.com/user-attachments/assets/2d3c0116-322b-4b90-bade-d1905159e0c5)
 
 자동라벨링 과정사진 : ![KakaoTalk_20250415_173741013](https://github.com/user-attachments/assets/e757166d-0bc2-478e-be39-47639d23413e)
 
 결과사진 : ![캡처](https://github.com/user-attachments/assets/b8f0ec96-9fdd-4b30-9ad4-dbdd1d307afe)
 
 ### 데이터 전처리
-데이터셋 사진 : ![캡처](https://github.com/user-attachments/assets/f3f0aa0a-a1b9-4ba1-b89f-d3c2c85961f0)
+데이터셋 사진 : 
 
 비전 제작 : ![KakaoTalk_20250415_173741013](https://github.com/user-attachments/assets/228da636-cf83-49c9-9383-fc4ba84c6afe)
 
