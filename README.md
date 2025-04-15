@@ -37,7 +37,7 @@ https://www.roboflow.com/
 ### 데이터검증
 자동라벨링 버튼사진 : ![캡처](https://github.com/user-attachments/assets/c46c39e1-4656-4066-9f5d-60d45378797f)
 
-자동라벨링 과정사진 : ![C-221008_13_CR06_01_A0645](https://github.com/user-attachments/assets/da337520-0d95-435f-990c-35f86f2749c2)
+자동라벨링 과정사진 : ![KakaoTalk_20250415_173100364](https://github.com/user-attachments/assets/f23751a4-ef73-4d84-aab5-df3982e08d5a)
 
 결과사진 : ![캡처](https://github.com/user-attachments/assets/b8f0ec96-9fdd-4b30-9ad4-dbdd1d307afe)
 
