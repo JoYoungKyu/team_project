@@ -25,7 +25,7 @@
 ## 🎁프로젝트 진행
 ![Image](https://github.com/user-attachments/assets/7f57d601-8528-42d8-817a-8e7887fecec1)
 
-#####데이터수집
+### 데이터수집
 ![C-221008_13_CR06_01_A0645](https://github.com/user-attachments/assets/727ffe01-8af3-47c1-9bf1-4a6a05a5479c)
 참고자료 : https://docs.ultralytics.com/
 ![image](https://github.com/user-attachments/assets/26e932e7-2213-47c3-90a0-019ec754b198)
