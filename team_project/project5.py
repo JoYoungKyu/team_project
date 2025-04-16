@@ -2,23 +2,12 @@ import cv2
 import numpy as np
 import os
 import winsound
-from roboflow import Roboflow
 from collections import deque
+from ultralytics import YOLO  # 최신 YOLOv8 API
 
-# Roboflow API 연결
-rf = Roboflow(api_key="KLlcHdVtvytxtpDiXA0W")
-project = rf.workspace("joyk").project("jyk-jipji")
-version = project.version(2)
-model = version.model
-
-# 감지 설정
-CONFIDENCE_THRESHOLD = 0.25
-IOU_THRESHOLD = 0.45
-MAX_DISAPPEARED = 30
-
-CLASSES = ['car', 'bus', 'truck', 'motorcycle', 'person', 'red_light', 'green_light', 'yellow_light', 'crosswalk',
-           'violation_redlight', 'wrong_way_entry', 'entering_sidewalk', 'illegal_u_turn', 'blocking_intersection',
-           'conflict_pedestrian', 'normal_entry']
+# 모델 로드
+model = YOLO('yolo11n.pt')
+CLASSES = model.names  # 클래스 이름 자동 추출
 
 NO_VECTOR_CLASSES = ['person', 'red_light', 'green_light', 'yellow_light', 'crosswalk']
 
@@ -37,10 +26,10 @@ def get_class_color(class_name):
     return COLORS.get(class_name, (255, 255, 255))
 
 class CentroidTracker:
-    def __init__(self, max_disappeared=MAX_DISAPPEARED):
+    def __init__(self, max_disappeared=30):
         self.next_object_id = 0
-        self.objects = dict()
-        self.disappeared = dict()
+        self.objects = {}
+        self.disappeared = {}
         self.max_disappeared = max_disappeared
         self.tracks = {}
 
@@ -86,11 +75,11 @@ class CentroidTracker:
                 used_rows.add(row)
                 used_cols.add(col)
 
-            unused_cols = set(range(0, len(input_centroids))).difference(used_cols)
+            unused_cols = set(range(len(input_centroids))).difference(used_cols)
             for col in unused_cols:
                 self.register(input_centroids[col])
 
-            unused_rows = set(range(0, len(obj_centroids))).difference(used_rows)
+            unused_rows = set(range(len(obj_centroids))).difference(used_rows)
             for row in unused_rows:
                 obj_id = obj_ids[row]
                 self.disappeared[obj_id] += 1
@@ -109,7 +98,7 @@ def compute_direction(track):
 def compute_distance(p1, p2):
     return np.linalg.norm(np.array(p1) - np.array(p2))
 
-# 비디오 설정
+# 비디오 로드
 video_path = "video/KakaoTalk_20250415_123136238.mp4"
 if not os.path.exists(video_path):
     print(f"비디오 파일을 찾을 수 없습니다: {video_path}")
@@ -117,19 +106,6 @@ if not os.path.exists(video_path):
 
 cap = cv2.VideoCapture(video_path)
 cv2.namedWindow('Violation Detection with Alert')
-
-# ▶️ 결과 비디오 저장 설정
-output_dir = "result_video"
-os.makedirs(output_dir, exist_ok=True)
-output_path = os.path.join(output_dir, "result.avi")
-
-# 프레임 크기 가져오기
-frame_width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
-frame_height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
-fps = int(cap.get(cv2.CAP_PROP_FPS))
-
-fourcc = cv2.VideoWriter_fourcc(*'XVID')
-out = cv2.VideoWriter(output_path, fourcc, fps, (frame_width, frame_height))
 
 click_points = []
 base_vectors = []
@@ -147,12 +123,7 @@ def click_event(event, x, y, flags, param):
 
 cv2.setMouseCallback('Violation Detection with Alert', click_event)
 
-trackers = {
-    cls: CentroidTracker() for cls in ['car', 'bus', 'truck', 'motorcycle', 'person',
-                                       'violation_redlight', 'wrong_way_entry', 'entering_sidewalk',
-                                       'illegal_u_turn', 'blocking_intersection', 'conflict_pedestrian',
-                                       'normal_entry']
-}
+trackers = {cls: CentroidTracker() for cls in CLASSES if cls not in NO_VECTOR_CLASSES or cls == 'person'}
 
 while True:
     ret, frame = cap.read()
@@ -162,32 +133,23 @@ while True:
     alarm_triggered = False
 
     try:
-        results = model.predict(frame, confidence=CONFIDENCE_THRESHOLD, overlap=IOU_THRESHOLD)
-        predictions = results.json()['predictions']
-
-        red_light_on = any(pred['class'].lower() == 'red_light' for pred in predictions)
+        # YOLOv8 모델 추론
+        results = model.predict(source=frame, conf=0.25, verbose=False)[0]
         detections = {cls: [] for cls in trackers}
 
-        for pred in predictions:
-            class_name = pred['class'].lower()
-            confidence = pred['confidence']
-
-            if class_name in ['bus', 'truck'] and confidence < 0.9:
-                continue
-            if confidence < 0.2:
+        for result in results.boxes.data.cpu().numpy():
+            x1, y1, x2, y2, conf, cls_id = result
+            class_name = CLASSES[int(cls_id)]
+            if conf < 0.25:
                 continue
 
-            x = int(pred['x'] - pred['width'] / 2)
-            y = int(pred['y'] - pred['height'] / 2)
-            w = int(pred['width'])
-            h = int(pred['height'])
-            center = (x + w // 2, y + h // 2)
-
+            x1, y1, x2, y2 = map(int, [x1, y1, x2, y2])
+            center = ((x1 + x2) // 2, (y1 + y2) // 2)
             color = get_class_color(class_name)
-            label = f"{class_name} {confidence:.2f}"
+            label = f"{class_name} {conf:.2f}"
 
-            cv2.rectangle(frame, (x, y), (x + w, y + h), color, 2)
-            cv2.putText(frame, label, (x, y - 5), cv2.FONT_HERSHEY_SIMPLEX, 0.5, color, 1)
+            cv2.rectangle(frame, (x1, y1), (x2, y2), color, 2)
+            cv2.putText(frame, label, (x1, y1 - 5), cv2.FONT_HERSHEY_SIMPLEX, 0.5, color, 1)
 
             if class_name in trackers:
                 detections[class_name].append(center)
@@ -212,9 +174,9 @@ while True:
                 label = f"{cls} ID:{object_id}"
                 cv2.putText(frame, label, (center[0] - 10, center[1] + 20), cv2.FONT_HERSHEY_SIMPLEX, 0.5, color, 1)
 
-        for p in obj_positions['person'].values():
+        for p in obj_positions.get('person', {}).values():
             for vehicle_cls in ['car', 'bus', 'truck', 'motorcycle']:
-                for v in obj_positions[vehicle_cls].values():
+                for v in obj_positions.get(vehicle_cls, {}).values():
                     if compute_distance(p, v) < 80:
                         cv2.line(frame, p, v, (0, 0, 255), 2)
                         cv2.putText(frame, "conflict_pedestrian", (p[0], p[1] - 10),
@@ -227,9 +189,6 @@ while True:
     if alarm_triggered:
         winsound.Beep(1000, 200)
 
-    # 비디오 저장
-    out.write(frame)
-
     resized_frame = cv2.resize(frame, (640, 320))
     cv2.imshow('Violation Detection with Alert', resized_frame)
 
@@ -237,5 +196,4 @@ while True:
         break
 
 cap.release()
-out.release()
 cv2.destroyAllWindows()
