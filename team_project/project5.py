@@ -7,7 +7,7 @@ from ultralytics import YOLO  # 최신 YOLOv8 API
 
 # 모델 로드
 model = YOLO('yolo11n.pt')
-CLASSES = model.names  # 클래스 이름 자동 추출
+CLASSES = model.names
 
 NO_VECTOR_CLASSES = ['person', 'red_light', 'green_light', 'yellow_light', 'crosswalk']
 
@@ -107,6 +107,17 @@ if not os.path.exists(video_path):
 cap = cv2.VideoCapture(video_path)
 cv2.namedWindow('Violation Detection with Alert')
 
+# 저장할 폴더 및 파일명 설정
+output_dir = 'result_video'
+os.makedirs(output_dir, exist_ok=True)
+output_path = os.path.join(output_dir, 'YOLO11n.avi')
+
+# 저장할 비디오 설정
+frame_width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
+frame_height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
+fps = cap.get(cv2.CAP_PROP_FPS)
+out = cv2.VideoWriter(output_path, cv2.VideoWriter_fourcc(*'XVID'), fps, (frame_width, frame_height))
+
 click_points = []
 base_vectors = []
 selecting_base = True
@@ -133,7 +144,6 @@ while True:
     alarm_triggered = False
 
     try:
-        # YOLOv8 모델 추론
         results = model.predict(source=frame, conf=0.25, verbose=False)[0]
         detections = {cls: [] for cls in trackers}
 
@@ -192,8 +202,12 @@ while True:
     resized_frame = cv2.resize(frame, (640, 320))
     cv2.imshow('Violation Detection with Alert', resized_frame)
 
+    # 저장용 원본 프레임 기록
+    out.write(frame)
+
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 
 cap.release()
+out.release()
 cv2.destroyAllWindows()
