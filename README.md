@@ -63,6 +63,15 @@ Train : Vaild : Test =  8 : 1 : 1
 
 ### 모델 분석 및 검증
 
+YOLO11모델 : ![캡처](https://github.com/user-attachments/assets/8609560a-b575-440c-a570-bb6bfdc36c3f)
+
+실제 재작 모듈 : ![image](https://github.com/user-attachments/assets/561e2eea-0ecb-4c46-9024-fb199d85adcc)
+
+```
+둘다 실행 결과를 캡처한 것으로 둘의 차이점을 비교본으로 개시
+```
+### 모델 배포
+
 ## 🎁PPT 자료
 ```
 PPT 링크 및 파일 . . .
