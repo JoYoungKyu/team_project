@@ -37,9 +37,9 @@ https://www.its.go.kr/opendata/
 https://www.roboflow.com/
 
 ### 데이터검증
-자동라벨링 버튼사진 : ![KakaoTalk_20250415_175040917](https://github.com/user-attachments/assets/2d3c0116-322b-4b90-bade-d1905159e0c5)
+자동라벨링 버튼사진 : ![2025-04-16 16 46 31](https://github.com/user-attachments/assets/5f673aea-1d1d-449d-a24b-0018c3b4b3b9)
 
-자동라벨링 과정사진 : ![KakaoTalk_20250415_173741013](https://github.com/user-attachments/assets/e757166d-0bc2-478e-be39-47639d23413e)
+자동라벨링 과정사진 : ![class](https://github.com/user-attachments/assets/1bc6035e-bef5-4d1a-b889-32c17b62fc46)
 
 결과사진 : ![캡처](https://github.com/user-attachments/assets/b8f0ec96-9fdd-4b30-9ad4-dbdd1d307afe)
 
@@ -72,6 +72,13 @@ YOLO11모델 : ![캡처](https://github.com/user-attachments/assets/8609560a-b57
 ```
 ### 모델 배포
 실시간 영상 : PPT링크 참고
+데시보드 연동 이미지 (직접 만든 모델) : ![dashboard](https://github.com/user-attachments/assets/1e7f5e09-b6b0-4e69-9c42-d73d9764799c) ![dashboard_result](https://github.com/user-attachments/assets/f0438397-0f04-4343-a0b4-5900cd7afeab)
+
+코드 (직접 만든 모델) : https://github.com/JoYoungKyu/team_project/blob/main/dashboard/violation_dashboard.py
+
+데시보드 연동 이미지 (YOLO11n.pt모델) : ![KakaoTalk_20250416_155935297_01](https://github.com/user-attachments/assets/49c92962-c566-4d12-9564-9a10a47ec664) ![KakaoTalk_20250416_155935297_02](https://github.com/user-attachments/assets/da9e5f34-a1c6-4caf-8d16-1c0d53985457)
+
+코드 (YOLO11n.pt모델) : https://github.com/JoYoungKyu/team_project/blob/main/dashboard/app.py
 
 ### 피드백
 
