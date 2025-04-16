@@ -63,7 +63,7 @@ Train : Vaild : Test =  8 : 1 : 1
 
 ### 모델 분석 및 검증
 
-YOLO11모델 : image_result\C-221008_13_CR06_01_A0645.jpg  실제 재작 모듈 : ![image](https://github.com/user-attachments/assets/561e2eea-0ecb-4c46-9024-fb199d85adcc)
+YOLO11모델 : ![캡처](https://github.com/user-attachments/assets/a6564c13-b3dc-4b24-b934-5f472fb5cf0e)      실제 재작 모듈 : ![image](https://github.com/user-attachments/assets/561e2eea-0ecb-4c46-9024-fb199d85adcc)
 
 ## 🎁PPT 자료
 ```
