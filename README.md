@@ -48,7 +48,8 @@ https://www.roboflow.com/
 ```
 Train : Vaild : Test =  8 : 1 : 1
 ```
-
+### 모델 학습 및 튜닝
+모델 폴더 압축파일 : 
 ## 🎁PPT 자료
 ```
 PPT 링크 및 파일 . . .
