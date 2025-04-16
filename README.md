@@ -49,7 +49,11 @@ https://www.roboflow.com/
 Train : Vaild : Test =  8 : 1 : 1
 ```
 ### 모델 학습 및 튜닝
-모델 코드 사진 : 
+모델 코드 사진 : ![KakaoTalk_20250416_094056361](https://github.com/user-attachments/assets/3b5d50cd-fd9e-4e86-913c-4204ae693cd1)
+
+훈련 결과 그래프 : ![KakaoTalk_20250416_091435673](https://github.com/user-attachments/assets/6fcd1797-41c6-4d50-bf3a-d82547ccd852)
+
+
 ## 🎁PPT 자료
 ```
 PPT 링크 및 파일 . . .
