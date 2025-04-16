@@ -80,6 +80,7 @@ YOLO11모델 : ![캡처](https://github.com/user-attachments/assets/8609560a-b57
 
 코드 (YOLO11n.pt모델) : https://github.com/JoYoungKyu/team_project/blob/main/dashboard/app.py
 
+텐서보드 (직접 만든 모델) : 
 ### 피드백
 
 
