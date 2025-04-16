@@ -72,6 +72,13 @@ YOLO11모델 : ![캡처](https://github.com/user-attachments/assets/8609560a-b57
 ```
 ### 모델 배포
 실시간 영상 : PPT링크 참고
+데시보드 연동 이미지 (직접 만든 모델) : ![KakaoTalk_20250416_153417157](https://github.com/user-attachments/assets/63491240-6400-48d3-9020-54734f3b5b85) ![KakaoTalk_20250416_153826214](https://github.com/user-attachments/assets/424c72ec-8450-4c7b-b388-908271005c34)
+
+코드 (직접 만든 모델) : https://github.com/JoYoungKyu/team_project/blob/main/dashboard/violation_dashboard.py
+
+데시보드 연동 이미지 (YOLO11n.pt모델) : ![KakaoTalk_20250416_155935297_01](https://github.com/user-attachments/assets/49c92962-c566-4d12-9564-9a10a47ec664) ![KakaoTalk_20250416_155935297_02](https://github.com/user-attachments/assets/da9e5f34-a1c6-4caf-8d16-1c0d53985457)
+
+코드 (YOLO11n.pt모델) : https://github.com/JoYoungKyu/team_project/blob/main/dashboard/app.py
 
 ### 피드백
 
