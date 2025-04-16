@@ -70,6 +70,7 @@ YOLO11모델 : ![캡처](https://github.com/user-attachments/assets/8609560a-b57
 ```
 둘다 실행 결과를 캡처한 것으로 둘의 차이점을 비교본으로 개시
 ```
+### 모델 배포
 
 ## 🎁PPT 자료
 ```
