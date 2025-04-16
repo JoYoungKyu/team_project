@@ -28,6 +28,8 @@
 ### 데이터수집
 ![C-221008_13_CR06_01_A0645](https://github.com/user-attachments/assets/9b2732e5-5a2d-4626-98f8-9c20a711d37f)
 
+야간 : ![캡처](https://github.com/user-attachments/assets/ed4e4bd4-4650-441f-aa07-3d064f06821f)
+
 참고자료 : https://docs.ultralytics.com/
 
 https://www.its.go.kr/opendata/
@@ -53,6 +55,13 @@ Train : Vaild : Test =  8 : 1 : 1
 
 훈련 결과 그래프 : ![KakaoTalk_20250416_091435673](https://github.com/user-attachments/assets/6fcd1797-41c6-4d50-bf3a-d82547ccd852)
 
+![KakaoTalk_20250416_091511983](https://github.com/user-attachments/assets/d26edcd1-71a6-4efe-817c-870b27691a18)
+
+![KakaoTalk_20250416_092031604](https://github.com/user-attachments/assets/1879875e-ba69-43c7-af0c-360f1e3377bf)
+
+![KakaoTalk_20250416_092042011](https://github.com/user-attachments/assets/f8b4c1e1-c346-4a53-8afe-bf1621dff422)
+
+### 모델 분석 및 검증
 
 ## 🎁PPT 자료
 ```
