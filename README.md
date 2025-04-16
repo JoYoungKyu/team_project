@@ -76,9 +76,7 @@ YOLO11모델 : ![캡처](https://github.com/user-attachments/assets/8609560a-b57
 
 코드 (직접 만든 모델) : https://github.com/JoYoungKyu/team_project/blob/main/dashboard/violation_dashboard.py
 
-데시보드 연동 이미지 (YOLO11n.pt모델) : ![KakaoTalk_20250416_155935297_01](https://github.com/user-attachments/assets/49c92962-c566-4d12-9564-9a10a47ec664) 
-
-![KakaoTalk_20250416_155935297_02](https://github.com/user-attachments/assets/da9e5f34-a1c6-4caf-8d16-1c0d53985457)
+데시보드 연동 이미지 (YOLO11n.pt모델) : ![KakaoTalk_20250416_155935297_01](https://github.com/user-attachments/assets/49c92962-c566-4d12-9564-9a10a47ec664) ![KakaoTalk_20250416_155935297_02](https://github.com/user-attachments/assets/da9e5f34-a1c6-4caf-8d16-1c0d53985457)
 
 코드 (YOLO11n.pt모델) : https://github.com/JoYoungKyu/team_project/blob/main/dashboard/app.py
 
