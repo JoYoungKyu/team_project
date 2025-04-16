@@ -76,13 +76,18 @@ YOLO11모델 : ![캡처](https://github.com/user-attachments/assets/8609560a-b57
 
 코드 (직접 만든 모델) : https://github.com/JoYoungKyu/team_project/blob/main/dashboard/violation_dashboard.py
 
-데시보드 연동 이미지 (YOLO11n.pt모델) : ![KakaoTalk_20250416_155935297_01](https://github.com/user-attachments/assets/49c92962-c566-4d12-9564-9a10a47ec664) ![KakaoTalk_20250416_155935297_02](https://github.com/user-attachments/assets/da9e5f34-a1c6-4caf-8d16-1c0d53985457)
+데시보드 연동 이미지 (YOLO11n.pt모델) : ![yolo11](https://github.com/user-attachments/assets/ebf5d643-d533-44b6-a161-d71573c572fe)
 
 코드 (YOLO11n.pt모델) : https://github.com/JoYoungKyu/team_project/blob/main/dashboard/app.py
 
-텐서보드 (직접 만든 모델) : 
-### 피드백
+텐서보드 (직접 만든 모델) : ![KakaoTalk_20250416_173344730](https://github.com/user-attachments/assets/5cec6e6c-2832-4641-8c6a-2b82747badc1)
 
+### 피드백
+```
+컴퓨전매트릭스 시도(목요일에 예정),초기모델보다 더 정확하게 훈련시킨 모델사용, 영역지정은 제외, 벡터값을 기준으로 불법유턴같은 돌발상황 포착 사람과 차량의 거리측정해서 가까우면 위험 알리기 (경고음)
+```
+### 향후계획
+앞으로 더 보강해서 위기상황시 CCTV상황실에 직접적으로 알림이 가는 기능도 추가
 
 ## 🎁PPT 자료
 ```
