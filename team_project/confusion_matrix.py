@@ -4,15 +4,18 @@ import os
 import winsound
 from roboflow import Roboflow
 from collections import deque
-from sklearn.metrics import classification_report, confusion_matrix
+from sklearn.metrics import classification_report, confusion_matrix, roc_curve, auc, precision_recall_curve
 from sklearn.preprocessing import MultiLabelBinarizer
+import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
 # Roboflow API 연결
-rf = Roboflow(api_key="KLlcHdVtvytxtpDiXA0W")
-project = rf.workspace("joyk").project("jyk-jipji")
-model = project.version(2).model
+rf = Roboflow(api_key="EOcgTkCLUc6sFR8Pv6Lf")
+project = rf.workspace("joyk-cl8nt").project("project-twhf4")
+version = project.version(1)
+model = version.model
+dataset = version.download("yolov11")  # ✅ 데이터셋 다운로드 (훈련 목적)
 
 # 설정값
 CONFIDENCE_THRESHOLD = 0.25
@@ -21,7 +24,7 @@ MAX_DISAPPEARED = 30
 
 # 색상 정의
 COLORS = {
-    'car': (0, 255, 0), 'bus': (0, 200, 0), 'truck': (0, 150, 0), 'motorcycle': (0, 100, 0),
+    'car': (0, 255, 0), 'bus': (0, 200, 0), 'truck': (0, 150, 0), 'motorcycle': (0, 100, 0), 'bicycle': (0, 50, 0),
     'person': (255, 0, 255), 'red_light': (0, 0, 255), 'green_light': (0, 255, 0), 'yellow_light': (0, 255, 255),
     'crosswalk': (255, 255, 255), 'violation_redlight': (0, 0, 255), 'wrong_way_entry': (0, 100, 255),
     'entering_sidewalk': (255, 100, 0), 'illegal_u_turn': (255, 0, 100), 'blocking_intersection': (200, 0, 100),
@@ -100,17 +103,27 @@ def compute_direction(track):
 def compute_distance(p1, p2):
     return np.linalg.norm(np.array(p1) - np.array(p2))
 
+def top_k_accuracy(true_matrix, pred_matrix, k=3):
+    correct = 0
+    total = len(true_matrix)
+    for true_row, pred_row in zip(true_matrix, pred_matrix):
+        true_labels = set(np.where(true_row == 1)[0])
+        top_k_preds = np.argsort(pred_row)[::-1][:k]
+        if true_labels.intersection(top_k_preds):
+            correct += 1
+    return correct / total if total > 0 else 0
+
 # ✅ 프레임별 Ground Truth
 frame_ground_truth = {
-    0: ['car', 'person'],
+    0: ['car'],
     30: ['bus'],
     60: ['car'],
     90: ['truck'],
-    120: ['person', 'motorcycle'],
-    # 필요 시 더 추가
+    120: ['motorcycle', 'bicycle', 'person'],
 }
 
-video_path = "video/KakaoTalk_20250415_123138892.mp4"
+# 📹 비디오 경로 설정
+video_path = "video/KakaoTalk_20250415_123136238.mp4"
 if not os.path.exists(video_path):
     print("❌ 비디오 파일 없음")
     exit(1)
@@ -122,7 +135,7 @@ frame_height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
 
 output_dir = "result_video"
 os.makedirs(output_dir, exist_ok=True)
-output_path = os.path.join(output_dir, "result1.avi")
+output_path = os.path.join(output_dir, "result5.avi")
 fourcc = cv2.VideoWriter_fourcc(*'XVID')
 out = cv2.VideoWriter(output_path, fourcc, fps, (frame_width, frame_height))
 
@@ -151,9 +164,12 @@ try:
             for pred in predictions:
                 class_name = pred['class'].lower()
                 confidence = pred['confidence']
-                if class_name in ['bus', 'truck'] and confidence < 0.9:
+
+                if class_name in ['truck', 'bus'] and confidence < 0.8:
                     continue
-                if confidence < 0.2:
+                if class_name in ['motorcycle', 'bicycle'] and confidence < 0.1:
+                    continue
+                if class_name in ['car', 'person'] and confidence < 0.3:
                     continue
 
                 frame_preds.append(class_name)
@@ -171,7 +187,6 @@ try:
                 if class_name in trackers:
                     detections[class_name].append(center)
 
-            # ✅ 프레임별 예측 저장
             if frame_count in frame_ground_truth:
                 frame_true_labels.append(frame_ground_truth[frame_count])
                 frame_predicted_labels.append(frame_preds)
@@ -221,7 +236,7 @@ finally:
     cv2.destroyAllWindows()
 
     if frame_true_labels and frame_predicted_labels:
-        print(f"🎥 저장된 프레임 수: {frame_count}")
+        print(f"\n🎥 저장된 프레임 수: {frame_count}")
         print(f"📁 저장 위치: {output_path}")
 
         mlb = MultiLabelBinarizer()
@@ -231,12 +246,11 @@ finally:
         true_matrix = mlb.transform(frame_true_labels)
         pred_matrix = mlb.transform(frame_predicted_labels)
 
-        print("\n📊 Classification Report (Multi-label):")
+        print("\n📊 Classification Report:")
         print(classification_report(true_matrix, pred_matrix, target_names=mlb.classes_))
 
         top1_true = [np.argmax(row) for row in true_matrix]
         top1_pred = [np.argmax(row) for row in pred_matrix]
-
         cm = confusion_matrix(top1_true, top1_pred, labels=range(len(mlb.classes_)))
 
         plt.figure(figsize=(10, 8))
@@ -246,5 +260,40 @@ finally:
         plt.title("Confusion Matrix (Frame-wise Top-1)")
         plt.tight_layout()
         plt.show()
+
+        top3_acc = top_k_accuracy(true_matrix, pred_matrix, k=3)
+        print(f"\n🎯 Top-3 Accuracy: {top3_acc:.2%}")
+
+        plt.figure(figsize=(16, 6))
+
+        plt.subplot(1, 2, 1)
+        for i, class_name in enumerate(mlb.classes_):
+            fpr, tpr, _ = roc_curve(true_matrix[:, i], pred_matrix[:, i])
+            roc_auc = auc(fpr, tpr)
+            plt.plot(fpr, tpr, label=f"{class_name} (AUC = {roc_auc:.2f})")
+        plt.plot([0, 1], [0, 1], 'k--')
+        plt.title("ROC Curve")
+        plt.xlabel("False Positive Rate")
+        plt.ylabel("True Positive Rate")
+        plt.legend()
+
+        plt.subplot(1, 2, 2)
+        for i, class_name in enumerate(mlb.classes_):
+            precision, recall, _ = precision_recall_curve(true_matrix[:, i], pred_matrix[:, i])
+            plt.plot(recall, precision, label=f"{class_name}")
+        plt.xlabel("Recall")
+        plt.ylabel("Precision")
+        plt.title("Precision-Recall Curve")
+        plt.legend()
+
+        plt.tight_layout()
+        plt.show()
+
+        report_df = pd.DataFrame(classification_report(true_matrix, pred_matrix, target_names=mlb.classes_, output_dict=True)).transpose()
+        print("\n📋 Per-Class Evaluation:")
+        print(report_df[['precision', 'recall', 'f1-score', 'support']])
+        report_df.to_csv("evaluation_report.csv")
+        print("✅ 평가 결과 저장 완료: evaluation_report.csv")
+
     else:
-        print("⚠️ 라벨 정보 부족으로 평가를 수행할 수 없습니다.")
+        print("⚠️ 평가에 사용할 라벨 데이터 부족")

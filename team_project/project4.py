@@ -5,11 +5,12 @@ import winsound
 from roboflow import Roboflow
 from collections import deque
 
-# Roboflow API 연결
-rf = Roboflow(api_key="KLlcHdVtvytxtpDiXA0W")
-project = rf.workspace("joyk").project("jyk-jipji")
-version = project.version(2)
+# Roboflow API 연결 및 데이터셋 다운로드 (선택적)
+rf = Roboflow(api_key="EOcgTkCLUc6sFR8Pv6Lf")
+project = rf.workspace("joyk-cl8nt").project("project-twhf4")
+version = project.version(1)
 model = version.model
+dataset = version.download("yolov11")  # <-- 이 부분은 학습 데이터를 다운로드할 때만 사용
 
 # 설정값
 CONFIDENCE_THRESHOLD = 0.25
@@ -98,7 +99,7 @@ def compute_distance(p1, p2):
     return np.linalg.norm(np.array(p1) - np.array(p2))
 
 # 입력 비디오
-video_path = "video\KakaoTalk_20250415_123136238.mp4"
+video_path = "video\\KakaoTalk_20250415_123136238.mp4"
 if not os.path.exists(video_path):
     print("❌ 비디오 파일 없음")
     exit(1)
@@ -167,7 +168,6 @@ try:
                     direction = compute_direction(track)
                     color = get_class_color(cls)
 
-                    # 라벨링만 남기고 중심점/벡터 제거
                     if cls not in ['person', 'crosswalk']:
                         cv2.circle(frame, center, 4, color, -1)
                         if direction:
@@ -179,7 +179,6 @@ try:
                     cv2.putText(frame, label, (center[0] - 10, center[1] + 20),
                                 cv2.FONT_HERSHEY_SIMPLEX, 0.5, color, 1)
 
-            # pedestrian conflict check
             for p in obj_positions.get('person', {}).values():
                 for vehicle_cls in ['car', 'bus', 'truck', 'motorcycle']:
                     for v in obj_positions.get(vehicle_cls, {}).values():
@@ -196,7 +195,6 @@ try:
             winsound.Beep(1000, 200)
 
         out.write(frame)
-
         display_frame = cv2.resize(frame, (640, 480))
         cv2.imshow('Violation Detection with Alert', display_frame)
 
