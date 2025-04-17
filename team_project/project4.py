@@ -99,7 +99,7 @@ def compute_distance(p1, p2):
     return np.linalg.norm(np.array(p1) - np.array(p2))
 
 # 입력 비디오
-video_path = "video\\KakaoTalk_20250415_123136238.mp4"
+video_path = "video/KakaoTalk_20250415_123136238.mp4"
 if not os.path.exists(video_path):
     print("❌ 비디오 파일 없음")
     exit(1)

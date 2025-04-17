@@ -16,7 +16,7 @@ from sklearn.metrics import (
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-# 환경변수 불러오기 (.env 사용)
+# .env 환경변수 불러오기
 load_dotenv()
 TWILIO_SID = os.getenv("TWILIO_SID")
 TWILIO_AUTH = os.getenv("TWILIO_AUTH")
@@ -27,23 +27,24 @@ TWILIO_TO = os.getenv("TWILIO_TO")
 st.set_page_config(layout="wide")
 st.title("🚦 실시간 위반 탐지 대시보드")
 
-# 영상 업로드
+# Roboflow 모델 로딩 및 YOLOv11 데이터셋 다운로드
+rf = Roboflow(api_key="EOcgTkCLUc6sFR8Pv6Lf")
+project = rf.workspace("joyk-cl8nt").project("project-twhf4")
+version = project.version(1)
+model = version.model
+dataset = version.download("yolov11")  # 로컬로 데이터셋 다운로드
+
+# 사용자 영상 업로드
 video_file = st.file_uploader("🔼 영상 업로드 (.mp4, .avi)", type=["mp4", "avi"])
 
 # 최대 프레임 수 설정
 max_frames = st.slider("🎞️ 처리할 최대 프레임 수", 100, 2000, 300)
 
-# Roboflow 모델 로딩
-rf = Roboflow(api_key="EOcgTkCLUc6sFR8Pv6Lf")
-project = rf.workspace("joyk-cl8nt").project("project-twhf4")
-version = project.version('1')
-model = version.model
-
-# 탐지 임계값 설정
+# 탐지 임계값
 CONFIDENCE_THRESHOLD = 0.25
 IOU_THRESHOLD = 0.45
 
-# Twilio 알림 전송 함수
+# 문자 알림 함수
 def send_sms_alert(message):
     try:
         client = Client(TWILIO_SID, TWILIO_AUTH)
@@ -56,7 +57,7 @@ def send_sms_alert(message):
     except Exception as e:
         st.error(f"❌ 문자 전송 실패: {e}")
 
-# 탐지 로그 저장용 리스트
+# 로그 저장용 리스트
 log_records = []
 true_labels = []
 predicted_labels = []
@@ -129,28 +130,26 @@ if video_file:
     tfile.write(video_file.read())
     stats = process_video(tfile.name, max_frames)
 
-    # 결과 요약 출력
+    # 탐지 통계
     st.subheader("📊 탐지 통계")
     st.write(stats)
 
-    # CSV 로그 저장
+    # 로그 저장
     df_logs = pd.DataFrame(log_records)
     os.makedirs("logs", exist_ok=True)
     csv_path = f"logs/detection_log_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv"
     df_logs.to_csv(csv_path, index=False)
     st.success(f"📁 CSV 로그 저장 완료: `{csv_path}`")
 
+    # 평가 지표 계산
     if true_labels and predicted_labels:
-        # Precision, Recall, F1-Score 계산
         precision = precision_score(true_labels, predicted_labels, average='macro', zero_division=0)
         recall = recall_score(true_labels, predicted_labels, average='macro', zero_division=0)
         accuracy = accuracy_score(true_labels, predicted_labels)
         f1 = f1_score(true_labels, predicted_labels, average='macro')
-
-        # Confusion Matrix
         cm = confusion_matrix(true_labels, predicted_labels)
 
-        # PR/ROC 곡선 및 평균 정밀도
+        # 이진화 (위반 차량 vs 기타)
         true_labels_binary = [1 if label in ["car", "bus", "truck"] else 0 for label in true_labels]
         confidences_array = np.array(confidences)
 
@@ -166,7 +165,6 @@ if video_file:
             fpr, tpr, _ = roc_curve(true_labels_binary, confidences_array)
             st.write(f"평균 정밀도 (Average Precision): {average_precision:.2f}")
 
-            # Confusion Matrix 시각화
             st.subheader("📊 Confusion Matrix")
             fig, ax = plt.subplots()
             sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', ax=ax)
@@ -174,7 +172,6 @@ if video_file:
             ax.set_ylabel('True')
             st.pyplot(fig)
 
-            # PR Curve
             st.subheader("📈 Precision-Recall 곡선")
             fig, ax = plt.subplots()
             ax.plot(recall_vals, precision_vals, color='blue')
@@ -183,7 +180,6 @@ if video_file:
             ax.set_title('Precision-Recall Curve')
             st.pyplot(fig)
 
-            # ROC Curve
             st.subheader("📈 ROC 곡선")
             fig, ax = plt.subplots()
             ax.plot(fpr, tpr, color='blue')
@@ -194,7 +190,6 @@ if video_file:
         else:
             st.warning("📉 PR/ROC 곡선을 생성할 수 없습니다 (데이터 부족)")
 
-        # Confidence Score Histogram
         st.subheader("📈 신뢰 점수 분포")
         fig = px.histogram(df_logs, x="confidence", title="신뢰 점수 분포")
         st.plotly_chart(fig, use_container_width=True)
