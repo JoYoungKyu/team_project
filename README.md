@@ -86,6 +86,7 @@ YOLO11모델 : ![캡처](https://github.com/user-attachments/assets/8609560a-b57
 ```
 컴퓨전매트릭스 시도(목요일에 예정),초기모델보다 더 정확하게 훈련시킨 모델사용, 영역지정은 제외, 벡터값을 기준으로 불법유턴같은 돌발상황 포착 사람과 차량의 거리측정해서 가까우면 위험 알리기 (경고음) 이용
 ```
+알림 화면 : ![KakaoTalk_20250417_185449636](https://github.com/user-attachments/assets/f4ea8cf2-3ced-4e6e-9c21-18a4b19d07b0)
 ### 아쉬운점
 ```
 인도영역을 지적하는 문제 해결
