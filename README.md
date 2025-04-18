@@ -72,6 +72,7 @@ YOLO11모델 : ![캡처](https://github.com/user-attachments/assets/8609560a-b57
 ```
 ### 모델 배포
 실시간 영상 : PPT링크 참고
+
 데시보드 연동 이미지 (직접 만든 모델) : ![dashboard](https://github.com/user-attachments/assets/1e7f5e09-b6b0-4e69-9c42-d73d9764799c) ![dashboard_result](https://github.com/user-attachments/assets/f0438397-0f04-4343-a0b4-5900cd7afeab) ![제작모델 보드이미지](https://github.com/user-attachments/assets/f1ead4df-59a5-4d98-be84-d5ecca394067) ![제작모델 보드이미지1](https://github.com/user-attachments/assets/287360e3-7840-4b88-9452-dd3ceda46f72) ![제작모델 보드이미지2](https://github.com/user-attachments/assets/aba8101e-815a-48cb-8c1a-2a8249019190) ![제작모델 보드이미지3](https://github.com/user-attachments/assets/e6d6fd69-59e0-43a1-858e-a390f547a3af) ![제작모델 보드이미지4](https://github.com/user-attachments/assets/8833cb2e-c9ca-45a2-83dd-a2b93d3acc53) ![제작모델 보드이미지5](https://github.com/user-attachments/assets/b8da983d-4027-4f23-9e04-4adefcab38b3) ![제작모델 보드이미지6](https://github.com/user-attachments/assets/708506d0-2742-4469-a71f-5858e7e6cb22) ![제작모델 보드이미지7](https://github.com/user-attachments/assets/de157e38-55a0-4c65-9dbc-a1cc4cb2b726) ![제작모델 보드이미지8](https://github.com/user-attachments/assets/11074c7f-1cf7-4c2a-97a1-7137e903957e)
 
 코드 (직접 만든 모델) : https://github.com/JoYoungKyu/team_project/blob/main/dashboard/violation_dashboard2.py
