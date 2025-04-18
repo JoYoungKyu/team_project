@@ -37,10 +37,14 @@ https://www.its.go.kr/opendata/
 https://www.roboflow.com/
 ```
 ### 데이터검증
-자동라벨링 버튼사진 : 
+자동라벨링 버튼사진 :
+
 ![2025-04-16 16 46 31](https://github.com/user-attachments/assets/5f673aea-1d1d-449d-a24b-0018c3b4b3b9)
 
-자동라벨링 과정사진 : ![class](https://github.com/user-attachments/assets/1bc6035e-bef5-4d1a-b889-32c17b62fc46)
+자동라벨링 과정사진 :
+
+![2](https://github.com/user-attachments/assets/d5c0e756-5b7b-4f9f-a70a-0fc25fb6ad71)
+
 
 결과사진 : ![캡처](https://github.com/user-attachments/assets/b8f0ec96-9fdd-4b30-9ad4-dbdd1d307afe)
 
