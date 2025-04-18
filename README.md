@@ -28,7 +28,9 @@
 ### 데이터수집
 ![1](https://github.com/user-attachments/assets/11270d1b-2cd7-4104-b893-0e64a78142ee)
 
-야간 : ![캡처](https://github.com/user-attachments/assets/ed4e4bd4-4650-441f-aa07-3d064f06821f)
+야간 : 
+
+![캡처](https://github.com/user-attachments/assets/ed4e4bd4-4650-441f-aa07-3d064f06821f)
 
 참고자료 : https://docs.ultralytics.com/
 
