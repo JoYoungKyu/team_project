@@ -89,7 +89,7 @@ YOLO11모델 : ![캡처](https://github.com/user-attachments/assets/8609560a-b57
 알림 화면 : ![KakaoTalk_20250417_185449636](https://github.com/user-attachments/assets/f4ea8cf2-3ced-4e6e-9c21-18a4b19d07b0)
 ### 아쉬운점
 ```
-인도영역을 지적하는 문제 해결
+인도영역을 지적하는 문제 해결과 차량과 차량사이의 거리측정을 못한것 사유 : 시간사유
 ```
 ### 향후계획
 앞으로 더 보강해서 위기상황시 CCTV상황실에 직접적으로 알림이 가는 기능도 추가, 인도 진입상황 포착 해결
