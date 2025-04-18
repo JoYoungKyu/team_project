@@ -46,7 +46,9 @@ https://www.roboflow.com/
 ![2](https://github.com/user-attachments/assets/d5c0e756-5b7b-4f9f-a70a-0fc25fb6ad71)
 
 
-결과사진 : ![캡처](https://github.com/user-attachments/assets/b8f0ec96-9fdd-4b30-9ad4-dbdd1d307afe)
+결과사진 :
+
+![캡처](https://github.com/user-attachments/assets/b8f0ec96-9fdd-4b30-9ad4-dbdd1d307afe)
 
 ### 데이터 전처리
 데이터셋 사진 : ![KakaoTalk_20250415_175443746](https://github.com/user-attachments/assets/e68cfec2-9211-486d-a619-8cf8492f3923)
