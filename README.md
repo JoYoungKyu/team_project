@@ -105,6 +105,4 @@ YOLO11모델 : ![캡처](https://github.com/user-attachments/assets/8609560a-b57
 5. 라벨링 신뢰도 조정
 
 ## 🎁PPT 자료
-```
 JoyK_교차로 돌발 진입 감지.pdf
-```
