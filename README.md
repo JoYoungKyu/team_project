@@ -45,15 +45,18 @@ https://www.roboflow.com/
 
 ![2](https://github.com/user-attachments/assets/d5c0e756-5b7b-4f9f-a70a-0fc25fb6ad71)
 
-
 결과사진 :
 
 ![3](https://github.com/user-attachments/assets/e309370e-036a-49eb-a676-088d2d00eac2)
 
 ### 데이터 전처리
-데이터셋 사진 : ![KakaoTalk_20250415_175443746](https://github.com/user-attachments/assets/e68cfec2-9211-486d-a619-8cf8492f3923)
+데이터셋 사진 :
 
-비전 제작 : ![캡처](https://github.com/user-attachments/assets/b34e5fd7-24b2-466e-8935-fb2a32ad3bbe)
+![4](https://github.com/user-attachments/assets/401e62ab-7730-4512-8b93-384dc9fc5a9f)
+
+비전 제작 :
+
+![캡처](https://github.com/user-attachments/assets/b34e5fd7-24b2-466e-8935-fb2a32ad3bbe)
 ```
 Train : Vaild : Test =  8 : 1 : 1
 ```
