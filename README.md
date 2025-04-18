@@ -26,7 +26,7 @@
 ![Image](https://github.com/user-attachments/assets/7f57d601-8528-42d8-817a-8e7887fecec1)
 
 ### 데이터수집
-![C-221008_13_CR06_01_A0645](https://github.com/user-attachments/assets/9b2732e5-5a2d-4626-98f8-9c20a711d37f)
+![433728314-9b2732e5-5a2d-4626-98f8-9c20a711d37f (1)](https://github.com/user-attachments/assets/10b73b88-df55-4c3c-acff-4524980d7b90)
 
 야간 : ![캡처](https://github.com/user-attachments/assets/ed4e4bd4-4650-441f-aa07-3d064f06821f)
 
