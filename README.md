@@ -39,7 +39,7 @@ https://www.roboflow.com/
 ### 데이터검증
 자동라벨링 버튼사진 :
 
-![2025-04-16 16 46 31](https://github.com/user-attachments/assets/5f673aea-1d1d-449d-a24b-0018c3b4b3b9)
+![4](https://github.com/user-attachments/assets/0c3a0d0a-7643-4566-ad50-7c0d7afb04a6)
 
 자동라벨링 과정사진 :
 
