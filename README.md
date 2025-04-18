@@ -106,5 +106,5 @@ YOLO11모델 : ![캡처](https://github.com/user-attachments/assets/8609560a-b57
 
 ## 🎁PPT 자료
 ```
-PPT 링크 및 파일 . . .
+
 ```
