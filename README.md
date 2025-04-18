@@ -51,7 +51,7 @@ https://www.roboflow.com/
 Train : Vaild : Test =  8 : 1 : 1
 ```
 ### 모델 학습 및 튜닝
-모델 코드 사진 : ![코드](https://github.com/user-attachments/assets/6c3ac133-5f21-4c1a-80dd-df288c5ebb93)
+모델 코드 사진 : ![코드](https://github.com/user-attachments/assets/3f495da8-2da4-4a2d-b114-0d2b4d42c5ab)
 
 훈련 결과 그래프 : ![KakaoTalk_20250416_091435673](https://github.com/user-attachments/assets/6fcd1797-41c6-4d50-bf3a-d82547ccd852)
 
@@ -81,6 +81,10 @@ YOLO11모델 : ![캡처](https://github.com/user-attachments/assets/8609560a-b57
 코드 (YOLO11n.pt모델) : https://github.com/JoYoungKyu/team_project/blob/main/dashboard/app.py
 
 텐서보드 (직접 만든 모델) : ![KakaoTalk_20250416_173344730](https://github.com/user-attachments/assets/5cec6e6c-2832-4641-8c6a-2b82747badc1)
+
+![제작모델 텐서보드이미지](https://github.com/user-attachments/assets/49211271-305a-4263-a07f-f33c4fcd7a23)
+
+![제작모델 텐서보드이미지1](https://github.com/user-attachments/assets/75a0c8d2-d189-4d77-8afe-49866f9de6b1)
 
 ### 피드백
 ```
