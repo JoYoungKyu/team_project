@@ -61,6 +61,10 @@ Train : Vaild : Test =  8 : 1 : 1
 
 ![KakaoTalk_20250416_092042011](https://github.com/user-attachments/assets/f8b4c1e1-c346-4a53-8afe-bf1621dff422)
 
+컨피던스 메트릭스 결과(제작한 모델) : ![Figure_1-3](https://github.com/user-attachments/assets/36ff73e0-2c2d-4bb3-9066-35795ce7ad0e)
+
+![Figure_2-3](https://github.com/user-attachments/assets/fa9a1c13-a384-4717-890e-462df77d6b69)
+
 ### 모델 분석 및 검증
 
 YOLO11모델 : ![캡처](https://github.com/user-attachments/assets/8609560a-b575-440c-a570-bb6bfdc36c3f)
