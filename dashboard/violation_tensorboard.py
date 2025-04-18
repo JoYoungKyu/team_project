@@ -14,9 +14,9 @@ st.title("🚦 실시간 위반 탐지 대시보드")
 video_file = st.file_uploader("🔼 영상 업로드 (.mp4)", type=["mp4", "avi"])
 
 # Roboflow 모델 불러오기
-rf = Roboflow(api_key="KLlcHdVtvytxtpDiXA0W")  # 본인 API 키 입력
-project = rf.workspace("joyk").project("jyk-jipji")
-version = project.version(2)
+rf = Roboflow(api_key="EOcgTkCLUc6sFR8Pv6Lf")
+project = rf.workspace("joyk-cl8nt").project("project-twhf4")
+version = project.version(1)
 model = version.model
 
 # 탐지 임계값 설정
