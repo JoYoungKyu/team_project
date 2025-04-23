@@ -60,7 +60,7 @@ Train : Vaild : Test =  8 : 1 : 1
 
 ![그래프(상세)](https://github.com/user-attachments/assets/deb2a836-683c-4be6-8c74-af84123567cb)
 
-![KakaoTalk_20250416_092031604](https://github.com/user-attachments/assets/1879875e-ba69-43c7-af0c-360f1e3377bf)
+![클래스](https://github.com/user-attachments/assets/36b09dd6-dbda-42c4-925c-30ecbbcad6b1)
 
 ![KakaoTalk_20250416_092042011](https://github.com/user-attachments/assets/f8b4c1e1-c346-4a53-8afe-bf1621dff422)
 
