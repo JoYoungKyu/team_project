@@ -43,18 +43,16 @@ https://www.roboflow.com/
 ![전처리](https://github.com/user-attachments/assets/b47fca84-3a7a-415a-afea-bceb33ee01bd)
 
 비전 제작 :
-![캡처](https://github.com/user-attachments/assets/b34e5fd7-24b2-466e-8935-fb2a32ad3bbe)
+![모델재작](https://github.com/user-attachments/assets/1f635a4f-5704-4bed-a875-f382f5aaa514)
 
 ```
 Train : Vaild : Test =  8 : 1 : 1
 ```
 ### 모델 학습 및 튜닝
 모델 코드 사진 :
-
 ![코드](https://github.com/user-attachments/assets/3f495da8-2da4-4a2d-b114-0d2b4d42c5ab)
 
 훈련 결과 그래프 :
-
 ![그래프](https://github.com/user-attachments/assets/7e8cdeff-bbd8-47e9-90dc-6d29592f7c65)
 
 ![그래프(상세)](https://github.com/user-attachments/assets/deb2a836-683c-4be6-8c74-af84123567cb)
