@@ -128,7 +128,7 @@ https://github.com/JoYoungKyu/team_project/blob/main/dashboard/app.py
 ```
 알림 화면 :
 
-![KakaoTalk_20250417_185449636](https://github.com/user-attachments/assets/f4ea8cf2-3ced-4e6e-9c21-18a4b19d07b0)
+![2025-04-23 13 59 55](https://github.com/user-attachments/assets/d13d90aa-52dc-4374-a794-946c061a9724)
 
 ### 향후계획
 1. 인도 및 차도 구분
