@@ -78,20 +78,20 @@ YOLO11모델 :
 ![데시보드(직접)2](https://github.com/user-attachments/assets/6911bd92-3579-4ca8-90e7-784ceeae8012) ![데시보드(직접)3](https://github.com/user-attachments/assets/0d9a7d00-6437-4919-8731-bf8c662830f3) ![데시보드(직접)4](https://github.com/user-attachments/assets/471f51b3-4b31-4b3e-9b9f-c3404b174ee4) ![데시보드(직접)5](https://github.com/user-attachments/assets/9faed452-e7e1-4960-b3de-40c591ee4a0b) ![데시보드(직접)6](https://github.com/user-attachments/assets/ede6eb8e-f848-47ed-bc59-9099ac542b57)
 
 코드 (직접 만든 모델) :
+
 https://github.com/JoYoungKyu/team_project/blob/main/dashboard/violation_dashboard2.py
+
 코드 (YOLO11n.pt모델) :
+
 https://github.com/JoYoungKyu/team_project/blob/main/dashboard/app.py
+
 데시보드 연동 이미지 (YOLO11n.pt모델) :
 
 ![대시보드](https://github.com/user-attachments/assets/0992c478-e752-47b0-9a0b-c97fc2441b88)
 
 텐서보드 (직접 만든 모델) :
 
-![2025-04-23 14 03 09](https://github.com/user-attachments/assets/22aff234-3694-44ec-bf76-9141b3318260)
-
-![제작모델 텐서보드이미지](https://github.com/user-attachments/assets/49211271-305a-4263-a07f-f33c4fcd7a23)
-
-![제작모델 텐서보드이미지1](https://github.com/user-attachments/assets/75a0c8d2-d189-4d77-8afe-49866f9de6b1)
+![2025-04-23 14 03 09](https://github.com/user-attachments/assets/22aff234-3694-44ec-bf76-9141b3318260) ![제작모델 텐서보드이미지](https://github.com/user-attachments/assets/49211271-305a-4263-a07f-f33c4fcd7a23) ![제작모델 텐서보드이미지1](https://github.com/user-attachments/assets/75a0c8d2-d189-4d77-8afe-49866f9de6b1)
 
 ### 피드백
 ```
