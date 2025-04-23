@@ -62,8 +62,7 @@ Train : Vaild : Test =  8 : 1 : 1
 ![클래스1](https://github.com/user-attachments/assets/204e14a5-6b34-4062-bf91-21789c943a63)
 
 컨피던스 메트릭스 결과(제작한 모델) :
-
-![Figure_1-3](https://github.com/user-attachments/assets/36ff73e0-2c2d-4bb3-9066-35795ce7ad0e)
+![매트릭스](https://github.com/user-attachments/assets/d4edddb9-9286-405b-83d1-0f5c3f275b4d)
 
 ![Figure_2-3](https://github.com/user-attachments/assets/fa9a1c13-a384-4717-890e-462df77d6b69)
 
