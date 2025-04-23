@@ -12,10 +12,6 @@
 ```
 교차로 돌발진입 포착
 ```
-## 타임테이블
-```
-타임테이블 . . . 
-```
 ## 프로젝트 진행
 ![과정](https://github.com/user-attachments/assets/52282c9f-debb-4efe-a20b-0716b9a2539a)
 ### 데이터수집
