@@ -68,7 +68,7 @@ Train : Vaild : Test =  8 : 1 : 1
 
 훈련 결과 그래프 :
 
-![KakaoTalk_20250416_091435673](https://github.com/user-attachments/assets/6fcd1797-41c6-4d50-bf3a-d82547ccd852)
+![그래프](https://github.com/user-attachments/assets/7e8cdeff-bbd8-47e9-90dc-6d29592f7c65)
 
 ![KakaoTalk_20250416_091511983](https://github.com/user-attachments/assets/d26edcd1-71a6-4efe-817c-870b27691a18)
 
