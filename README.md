@@ -47,7 +47,6 @@ https://www.roboflow.com/
 결과사진 :
 
 ![3](https://github.com/user-attachments/assets/e309370e-036a-49eb-a676-088d2d00eac2)
-
 ### 데이터 전처리
 데이터셋 사진 :
 
@@ -82,7 +81,6 @@ Train : Vaild : Test =  8 : 1 : 1
 ![Figure_2-3](https://github.com/user-attachments/assets/fa9a1c13-a384-4717-890e-462df77d6b69)
 
 ### 모델 분석 및 검증
-
 YOLO11모델 :
 
 ![캡처](https://github.com/user-attachments/assets/8609560a-b575-440c-a570-bb6bfdc36c3f)
