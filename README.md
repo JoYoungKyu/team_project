@@ -106,13 +106,13 @@ YOLO11모델 :
 
 https://github.com/JoYoungKyu/team_project/blob/main/dashboard/violation_dashboard2.py
 
-데시보드 연동 이미지 (YOLO11n.pt모델) :
-
-![2025-04-17 18 44 21](https://github.com/user-attachments/assets/10617660-01fc-440f-8334-bbdd5e5cf78a)![2025-04-17 18 47 16](https://github.com/user-attachments/assets/56927c0b-6359-4c0a-8497-19cb1480bf10)
-
 코드 (YOLO11n.pt모델) :
 
 https://github.com/JoYoungKyu/team_project/blob/main/dashboard/app.py
+
+데시보드 연동 이미지 (YOLO11n.pt모델) :
+
+![대시보드](https://github.com/user-attachments/assets/0992c478-e752-47b0-9a0b-c97fc2441b88)
 
 텐서보드 (직접 만든 모델) :
 
