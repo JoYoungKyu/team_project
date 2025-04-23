@@ -21,8 +21,8 @@
 ### 데이터수집
 ![이미지](https://github.com/user-attachments/assets/4258d17c-e76c-4dfa-8044-170fd6362205)
 
-야간 : 
-![캡처](https://github.com/user-attachments/assets/ed4e4bd4-4650-441f-aa07-3d064f06821f)
+야간 :
+![야간 이미지](https://github.com/user-attachments/assets/8d9de2d7-6b4b-400b-b1e2-a745b9241d55)
 ```
 참고자료 : https://docs.ultralytics.com/
 https://www.its.go.kr/opendata/
