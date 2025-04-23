@@ -20,7 +20,6 @@
 ![과정](https://github.com/user-attachments/assets/52282c9f-debb-4efe-a20b-0716b9a2539a)
 ### 데이터수집
 ![이미지](https://github.com/user-attachments/assets/4258d17c-e76c-4dfa-8044-170fd6362205)
-
 야간 :
 ![야간 이미지](https://github.com/user-attachments/assets/8d9de2d7-6b4b-400b-b1e2-a745b9241d55)
 ```
@@ -31,19 +30,15 @@ https://www.roboflow.com/
 ### 데이터검증
 자동라벨링 버튼사진 :
 ![4](https://github.com/user-attachments/assets/0c3a0d0a-7643-4566-ad50-7c0d7afb04a6)
-
 자동라벨링 과정사진 :
 ![2](https://github.com/user-attachments/assets/d5c0e756-5b7b-4f9f-a70a-0fc25fb6ad71)
-
 결과사진 :
 ![결과이미지](https://github.com/user-attachments/assets/81a2b7d4-60f2-4842-ad8c-a3c1fd8d2de8)
 ### 데이터 전처리
 데이터셋 사진 :
-
-![4](https://github.com/user-attachments/assets/401e62ab-7730-4512-8b93-384dc9fc5a9f)
+![전처리](https://github.com/user-attachments/assets/b47fca84-3a7a-415a-afea-bceb33ee01bd)
 
 비전 제작 :
-
 ![캡처](https://github.com/user-attachments/assets/b34e5fd7-24b2-466e-8935-fb2a32ad3bbe)
 
 ```
