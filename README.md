@@ -2,32 +2,24 @@
 ```
 교차로 교통 장애물 및 이벤트 감지 시스템 개발
 ```
-
 ## 우리인재 팀
 깃허브 링크 : https://github.com/joyoungkyu
-
 ```
 팀장 : 조영규 
 팀원 : 김우혁, 유혜정, 정날빛
 ```
-
-
 ## 프로젝트 주제
 ```
 교차로 돌발진입 포착
 ```
-
 ## 타임테이블
 ```
 타임테이블 . . . 
 ```
-
 ## 프로젝트 진행
 ![Image](https://github.com/user-attachments/assets/7f57d601-8528-42d8-817a-8e7887fecec1)
-
 ### 데이터수집
 ![이미지](https://github.com/user-attachments/assets/3388924a-39d3-4826-8f14-9a349de9f5f0)
-
 야간 : 
 ![캡처](https://github.com/user-attachments/assets/ed4e4bd4-4650-441f-aa07-3d064f06821f)
 ```
