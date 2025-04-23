@@ -64,7 +64,7 @@ Train : Vaild : Test =  8 : 1 : 1
 컨피던스 메트릭스 결과(제작한 모델) :
 ![매트릭스](https://github.com/user-attachments/assets/d4edddb9-9286-405b-83d1-0f5c3f275b4d)
 
-![Figure_2-3](https://github.com/user-attachments/assets/fa9a1c13-a384-4717-890e-462df77d6b69)
+![매트릭스 그래프](https://github.com/user-attachments/assets/c5c20532-bcb6-4dff-8e96-be0416c51f08)
 
 ### 모델 분석 및 검증
 YOLO11모델 :
