@@ -30,16 +30,13 @@ https://www.roboflow.com/
 ```
 ### 데이터검증
 자동라벨링 버튼사진 :
-
 ![4](https://github.com/user-attachments/assets/0c3a0d0a-7643-4566-ad50-7c0d7afb04a6)
 
 자동라벨링 과정사진 :
-
 ![2](https://github.com/user-attachments/assets/d5c0e756-5b7b-4f9f-a70a-0fc25fb6ad71)
 
 결과사진 :
-
-![3](https://github.com/user-attachments/assets/e309370e-036a-49eb-a676-088d2d00eac2)
+![결과이미지](https://github.com/user-attachments/assets/81a2b7d4-60f2-4842-ad8c-a3c1fd8d2de8)
 ### 데이터 전처리
 데이터셋 사진 :
 
