@@ -91,7 +91,7 @@ https://github.com/JoYoungKyu/team_project/blob/main/dashboard/app.py
 
 텐서보드 (직접 만든 모델) :
 
-![2025-04-23 14 03 09](https://github.com/user-attachments/assets/22aff234-3694-44ec-bf76-9141b3318260) ![제작모델 텐서보드이미지](https://github.com/user-attachments/assets/49211271-305a-4263-a07f-f33c4fcd7a23) ![제작모델 텐서보드이미지1](https://github.com/user-attachments/assets/75a0c8d2-d189-4d77-8afe-49866f9de6b1)
+![2025-04-23 14 03 09](https://github.com/user-attachments/assets/22aff234-3694-44ec-bf76-9141b3318260) ![텐서보드](https://github.com/user-attachments/assets/c4da8d93-465d-44da-afca-3db88e5bb1ae)
 
 ### 피드백
 ```
