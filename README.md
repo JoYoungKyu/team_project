@@ -53,6 +53,7 @@ Train : Vaild : Test =  8 : 1 : 1
 ![코드](https://github.com/user-attachments/assets/3f495da8-2da4-4a2d-b114-0d2b4d42c5ab)
 
 훈련 결과 그래프 :
+
 ![그래프](https://github.com/user-attachments/assets/7e8cdeff-bbd8-47e9-90dc-6d29592f7c65)
 
 ![그래프(상세)](https://github.com/user-attachments/assets/deb2a836-683c-4be6-8c74-af84123567cb)
@@ -62,6 +63,7 @@ Train : Vaild : Test =  8 : 1 : 1
 ![클래스1](https://github.com/user-attachments/assets/204e14a5-6b34-4062-bf91-21789c943a63)
 
 컨피던스 메트릭스 결과(제작한 모델) :
+
 ![매트릭스](https://github.com/user-attachments/assets/d4edddb9-9286-405b-83d1-0f5c3f275b4d)
 
 ![매트릭스 그래프](https://github.com/user-attachments/assets/c5c20532-bcb6-4dff-8e96-be0416c51f08)
