@@ -26,10 +26,9 @@
 ![Image](https://github.com/user-attachments/assets/7f57d601-8528-42d8-817a-8e7887fecec1)
 
 ### 데이터수집
-![1](https://github.com/user-attachments/assets/11270d1b-2cd7-4104-b893-0e64a78142ee)
+![이미지](https://github.com/user-attachments/assets/3388924a-39d3-4826-8f14-9a349de9f5f0)
 
 야간 : 
-
 ![캡처](https://github.com/user-attachments/assets/ed4e4bd4-4650-441f-aa07-3d064f06821f)
 ```
 참고자료 : https://docs.ultralytics.com/
