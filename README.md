@@ -17,7 +17,7 @@
 타임테이블 . . . 
 ```
 ## 프로젝트 진행
-![Image](https://github.com/user-attachments/assets/7f57d601-8528-42d8-817a-8e7887fecec1)
+![과정](https://github.com/user-attachments/assets/52282c9f-debb-4efe-a20b-0716b9a2539a)
 ### 데이터수집
 ![이미지](https://github.com/user-attachments/assets/4258d17c-e76c-4dfa-8044-170fd6362205)
 
