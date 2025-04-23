@@ -75,7 +75,7 @@ YOLO11모델 :
 데시보드 연동 이미지 (직접 만든 모델) :
 
 ![데시보드(직접)](https://github.com/user-attachments/assets/d73a228f-5f1b-4e25-8f95-26225a98ee14) ![데시보드(직접)1](https://github.com/user-attachments/assets/7f9abf32-095b-4ab0-bed9-9ddeea53eb9c)
-![데시보드(직접)2](https://github.com/user-attachments/assets/6911bd92-3579-4ca8-90e7-784ceeae8012) ![제작모델 보드이미지2](https://github.com/user-attachments/assets/4c9fe4fb-5446-4830-8a1a-11bbb9ee9881) ![제작모델 보드이미지3](https://github.com/user-attachments/assets/eeac66d1-339a-4d87-b53b-2833c41931fc) ![제작모델 보드이미지4](https://github.com/user-attachments/assets/ae463b59-f0b2-4663-983d-de005abc9370) ![제작모델 보드이미지5](https://github.com/user-attachments/assets/63680ce9-9f82-4afc-837c-4118740d56e2)
+![데시보드(직접)2](https://github.com/user-attachments/assets/6911bd92-3579-4ca8-90e7-784ceeae8012) ![데시보드(직접)3](https://github.com/user-attachments/assets/0d9a7d00-6437-4919-8731-bf8c662830f3) ![제작모델 보드이미지3](https://github.com/user-attachments/assets/eeac66d1-339a-4d87-b53b-2833c41931fc) ![제작모델 보드이미지4](https://github.com/user-attachments/assets/ae463b59-f0b2-4663-983d-de005abc9370) ![제작모델 보드이미지5](https://github.com/user-attachments/assets/63680ce9-9f82-4afc-837c-4118740d56e2)
 
 코드 (직접 만든 모델) :
 
