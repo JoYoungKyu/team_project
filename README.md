@@ -116,7 +116,7 @@ https://github.com/JoYoungKyu/team_project/blob/main/dashboard/app.py
 
 텐서보드 (직접 만든 모델) :
 
-![KakaoTalk_20250416_173344730](https://github.com/user-attachments/assets/5cec6e6c-2832-4641-8c6a-2b82747badc1)
+![2025-04-23 14 03 09](https://github.com/user-attachments/assets/22aff234-3694-44ec-bf76-9141b3318260)
 
 ![제작모델 텐서보드이미지](https://github.com/user-attachments/assets/49211271-305a-4263-a07f-f33c4fcd7a23)
 
