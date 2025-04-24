@@ -103,6 +103,7 @@ https://github.com/JoYoungKyu/team_project/blob/main/dashboard/app.py
 3. 여러 종류의 차량 데이터 수집 및 가공
 4. 여러 종류의 동물 데이터 수집 및 가공
 5. 라벨링 신뢰도 조정
+6. 데이터 수집할 때 라벨링 크기가 일정하게 수집하도록 국도 CCTV수집
 
 ## PPT 자료
 JoyK_교차로 돌발 진입 감지.pdf
